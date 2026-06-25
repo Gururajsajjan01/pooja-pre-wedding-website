@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pooja Pre Wedding Set — Almatti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Jost:wght@300;400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --indigo:#1c2a44;
+  --indigo-deep:#11192b;
+  --marigold:#e8a33d;
+  --marigold-light:#f4c873;
+  --sindoor:#b5283b;
+  --sand:#f4e9d3;
+  --sand-deep:#ead7ad;
+  --cream:#fffaf0;
+  --ink:#272320;
+  --ink-soft:#5a5249;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--sand);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+.eyebrow{
+  font-family:'Caveat',cursive;
+  font-size:1.5rem;
+  color:var(--marigold);
+  letter-spacing:.5px;
+}
+
+h1,h2,h3{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  color:var(--indigo);
+}
+
+a{color:inherit;}
+
+/* ---------- NAV ---------- */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 6%;
+  transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+}
+nav.scrolled{
+  background:var(--cream);
+  padding:12px 6%;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+.nav-brand{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:1.25rem;
+  color:var(--cream);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:color .4s ease;
+}
+.nav-logo{
+  width:40px;height:40px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(255,250,240,.6);
+}
+nav.scrolled .nav-brand{color:var(--indigo);}
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+.nav-links a{
+  text-decoration:none;
+  font-weight:500;
+  font-size:.95rem;
+  color:var(--cream);
+  position:relative;
+  transition:color .4s ease;
+}
+nav.scrolled .nav-links a{color:var(--ink);}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  left:0;bottom:-6px;
+  width:0;height:2px;
+  background:var(--marigold);
+  transition:width .3s ease;
+}
+.nav-links a:hover::after{width:100%;}
+.nav-toggle{display:none;}
+
+@media(max-width:768px){
+  .nav-links{
+    position:fixed;
+    top:0;right:0;
+    height:100vh;
+    width:70%;
+    background:var(--indigo-deep);
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    gap:28px;
+    padding:0 40px;
+    transform:translateX(100%);
+    transition:transform .4s ease;
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a{color:var(--cream)!important;font-size:1.3rem;}
+  .nav-toggle{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    z-index:1100;
+    background:none;border:none;
+  }
+  .nav-toggle span{
+    width:26px;height:2px;
+    background:var(--cream);
+    transition:.3s;
+  }
+  nav.scrolled .nav-toggle span{background:var(--indigo);}
+}
+
+/* ---------- HERO ---------- */
+header{
+  position:relative;
+  height:100vh;
+  min-height:640px;
+  overflow:hidden;
+  background:linear-gradient(180deg,var(--indigo-deep) 0%,var(--indigo) 45%,#3a3050 70%,var(--sindoor) 100%);
+}
+.hero-svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+.hero-content{
+  position:absolute;
+  left:7%;
+  bottom:14%;
+  max-width:600px;
+  color:var(--cream);
+  z-index:5;
+}
+.hero-content h1{
+  font-size:clamp(2.6rem,6vw,4.6rem);
+  line-height:1.04;
+  color:var(--cream);
+  margin:6px 0 14px;
+}
+.hero-content h1 em{
+  font-style:italic;
+  color:var(--marigold-light);
+}
+.hero-content p{
+  font-size:1.05rem;
+  opacity:.88;
+  margin-bottom:26px;
+  max-width:480px;
+}
+.hero-tags{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+  font-size:.9rem;
+  opacity:.85;
+}
+.hero-tags span{display:flex;align-items:center;gap:6px;}
+
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  margin:0 10px 10px 0;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:600;
+  font-size:.95rem;
+  letter-spacing:.3px;
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:2px solid transparent;
+}
+.btn:hover{transform:translateY(-3px);}
+.btn-fill{
+  background:var(--sindoor);
+  color:var(--cream);
+  box-shadow:0 8px 22px rgba(181,40,59,.4);
+}
+.btn-fill:hover{box-shadow:0 12px 28px rgba(181,40,59,.55);}
+.btn-outline{
+  border-color:rgba(255,250,240,.5);
+  color:var(--cream);
+}
+.btn-outline:hover{background:rgba(255,250,240,.12);}
+
+.scroll-cue{
+  position:absolute;
+  bottom:30px;right:7%;
+  color:var(--cream);
+  opacity:.7;
+  font-size:.8rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  z-index:5;
+}
+.scroll-cue .line{
+  width:1px;height:40px;
+  background:linear-gradient(var(--cream),transparent);
+  animation:dropline 1.8s ease-in-out infinite;
+}
+@keyframes dropline{
+  0%{transform:scaleY(0);transform-origin:top;}
+  50%{transform:scaleY(1);transform-origin:top;}
+  51%{transform-origin:bottom;}
+  100%{transform:scaleY(0);transform-origin:bottom;}
+}
+
+/* ---------- SECTION WRAPPER ---------- */
+section{
+  padding:110px 7%;
+  position:relative;
+}
+.section-head{
+  text-align:center;
+  max-width:680px;
+  margin:0 auto 60px;
+}
+.section-head .eyebrow{display:block;margin-bottom:6px;}
+.section-head h2{
+  font-size:clamp(2rem,4vw,2.8rem);
+}
+.section-head p{
+  color:var(--ink-soft);
+  margin-top:14px;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(36px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ---------- ABOUT ---------- */
+#about{background:var(--sand);}
+.about-wrap{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:60px;
+  align-items:center;
+  max-width:1100px;
+  margin:0 auto;
+}
+.about-badge{
+  width:100%;
+  aspect-ratio:1;
+  background:var(--cream);
+  border-radius:50%;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:6px solid var(--marigold-light);
+  box-shadow:0 16px 40px rgba(28,42,68,.18);
+  overflow:hidden;
+}
+.about-badge img{width:100%;height:100%;object-fit:cover;}
+.about-text .eyebrow{display:block;margin-bottom:6px;}
+.about-text h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:18px;}
+.about-text p{
+  color:var(--ink-soft);
+  line-height:1.85;
+  margin-bottom:16px;
+  font-size:1.02rem;
+}
+.about-stats{
+  display:flex;
+  gap:36px;
+  margin-top:30px;
+}
+.about-stats div strong{
+  font-family:'Fraunces',serif;
+  display:block;
+  font-size:1.8rem;
+  color:var(--sindoor);
+}
+.about-stats div span{
+  font-size:.85rem;
+  color:var(--ink-soft);
+}
+
+@media(max-width:768px){
+  .about-wrap{grid-template-columns:1fr;}
+  .about-badge{max-width:220px;margin:0 auto;}
+}
+
+/* ---------- JOURNEYS (services) — winding path layout ---------- */
+#services{
+  background:var(--cream);
+  overflow:hidden;
+}
+.path-wrap{
+  position:relative;
+  max-width:980px;
+  margin:0 auto;
+}
+.path-svg{
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+.journey-row{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  margin-bottom:70px;
+}
+.journey-row:nth-child(even){justify-content:flex-end;}
+.journey-card{
+  background:var(--sand);
+  border-radius:6px;
+  padding:30px 32px;
+  max-width:420px;
+  box-shadow:0 14px 34px rgba(28,42,68,.1);
+  position:relative;
+}
+.journey-card .icon{
+  width:46px;height:46px;
+  margin-bottom:14px;
+}
+.journey-card h3{
+  font-size:1.3rem;
+  margin-bottom:8px;
+}
+.journey-card p{
+  color:var(--ink-soft);
+  font-size:.95rem;
+  line-height:1.65;
+}
+.journey-card .tag{
+  position:absolute;
+  top:-14px;left:30px;
+  background:var(--marigold);
+  color:var(--indigo-deep);
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  padding:5px 12px;
+  border-radius:20px;
+}
+.journey-row:nth-child(2) .journey-card .tag{background:var(--sindoor);color:var(--cream);}
+.journey-row:nth-child(3) .journey-card .tag{background:var(--indigo);color:var(--cream);}
+.journey-row:nth-child(4) .journey-card .tag{background:#5a7d63;color:var(--cream);}
+
+@media(max-width:768px){
+  .journey-row,.journey-row:nth-child(even){justify-content:center;}
+  .journey-card{max-width:100%;}
+  .path-svg{display:none;}
+}
+
+/* ---------- MOMENTS (illustrated gallery) ---------- */
+#gallery{background:var(--indigo-deep);}
+#gallery .section-head h2{color:var(--cream);}
+#gallery .section-head p{color:#cfd3de;}
+#gallery .eyebrow{color:var(--marigold-light);}
+.moments-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;
+  max-width:1180px;
+  margin:0 auto;
+}
+.moment-card{
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  aspect-ratio:3/4;
+  transition:transform .4s ease;
+}
+.moment-card:hover{transform:translateY(-8px);}
+.moment-card{cursor:pointer;}
+.moment-card img{width:100%;height:100%;object-fit:cover;display:block;}
+.moment-caption{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  padding:22px 18px;
+  background:linear-gradient(transparent,rgba(0,0,0,.55));
+}
+.moment-caption .eyebrow{
+  color:var(--marigold-light);
+  font-size:1.3rem;
+  display:block;
+}
+.moment-caption span.sub{
+  color:#e9e6df;
+  font-size:.82rem;
+  display:block;
+  margin-top:2px;
+}
+
+/* ---------- BOOKING ---------- */
+#booking{
+  background:var(--sindoor);
+  background-image:radial-gradient(circle at 20% 20%,rgba(255,255,255,.08),transparent 50%),
+                    radial-gradient(circle at 85% 80%,rgba(255,255,255,.08),transparent 50%);
+}
+.booking-box{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+  color:var(--cream);
+}
+#booking .eyebrow{color:var(--marigold-light);}
+#booking h2{color:var(--cream);}
+.booking-box p{
+  opacity:.92;
+  margin:18px auto 30px;
+  max-width:520px;
+  line-height:1.7;
+}
+#booking .btn-fill{
+  background:var(--cream);
+  color:var(--sindoor);
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+#booking .btn-outline{border-color:rgba(255,250,240,.6);}
+.garland{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:46px;
+  opacity:.8;
+}
+.garland span{
+  width:10px;height:10px;
+  border-radius:50%;
+  background:var(--marigold-light);
+}
+
+/* ---------- CONTACT ---------- */
+#contact{background:var(--sand);}
+.contact-wrap{
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:50px;
+  max-width:1100px;
+  margin:0 auto;
+  align-items:start;
+}
+.contact-card{
+  background:var(--cream);
+  border-radius:10px;
+  padding:36px;
+  box-shadow:0 14px 34px rgba(28,42,68,.08);
+}
+.contact-card .eyebrow{display:block;margin-bottom:4px;}
+.contact-line{
+  display:flex;
+  gap:14px;
+  margin:18px 0;
+  align-items:flex-start;
+}
+.contact-line .ic{
+  width:34px;height:34px;
+  border-radius:50%;
+  background:var(--sand-deep);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  font-size:1rem;
+}
+.contact-line strong{display:block;font-size:.95rem;}
+.contact-line span{color:var(--ink-soft);font-size:.92rem;line-height:1.6;}
+.map-frame{
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 14px 34px rgba(28,42,68,.12);
+  height:100%;
+  min-height:340px;
+}
+.map-frame iframe{
+  width:100%;height:100%;
+  min-height:340px;
+  border:0;display:block;
+}
+
+@media(max-width:768px){
+  .contact-wrap{grid-template-columns:1fr;}
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:var(--indigo-deep);
+  color:var(--cream);
+  text-align:center;
+  padding:50px 6% 30px;
+}
+footer h3{color:var(--cream);font-size:1.3rem;margin-bottom:6px;}
+footer p{color:#b9bdca;font-size:.9rem;margin-top:4px;}
+.footer-logo{
+  width:64px;height:64px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--marigold);
+  margin-bottom:14px;
+}
+.foot-divider{
+  width:60px;height:2px;
+  background:var(--marigold);
+  margin:18px auto 18px;
+}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(10,8,16,.88);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease;
+  z-index:2000;
+  padding:30px;
+}
+.lightbox.open{opacity:1;pointer-events:auto;}
+.lightbox img{
+  max-width:90vw;
+  max-height:88vh;
+  border-radius:10px;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+/* ---------- CHAT WIDGET ---------- */
+.chat-widget{
+  position:fixed;
+  bottom:24px;left:24px;
+  z-index:999;
+}
+.chat-toggle{
+  width:60px;height:60px;
+  border-radius:50%;
+  border:3px solid var(--marigold-light);
+  background:var(--cream);
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  cursor:pointer;
+  padding:0;
+  overflow:hidden;
+  position:relative;
+}
+.chat-toggle img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.chat-toggle::after{
+  content:'';
+  position:absolute;
+  top:2px;right:2px;
+  width:12px;height:12px;
+  border-radius:50%;
+  background:#5a7d63;
+  border:2px solid var(--cream);
+}
+.chat-panel{
+  position:absolute;
+  bottom:74px;left:0;
+  width:320px;
+  max-width:88vw;
+  max-height:480px;
+  background:var(--cream);
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,.3);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transform:scale(.92) translateY(12px);
+  opacity:0;
+  pointer-events:none;
+  transition:transform .25s ease, opacity .25s ease;
+}
+.chat-widget.open .chat-panel{transform:scale(1) translateY(0);opacity:1;pointer-events:auto;}
+.chat-header{
+  background:var(--indigo);
+  color:var(--cream);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 14px;
+}
+.chat-header img{width:34px;height:34px;border-radius:50%;object-fit:cover;}
+.chat-header div{flex:1;}
+.chat-header strong{display:block;font-size:.9rem;font-family:'Jost',sans-serif;}
+.chat-header span{font-size:.72rem;color:#cfd3de;}
+.chat-header button{
+  background:none;border:none;color:var(--cream);
+  font-size:1.3rem;cursor:pointer;line-height:1;
+}
+.chat-body{
+  flex:1;
+  padding:14px;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-height:230px;
+}
+.chat-msg{display:flex;gap:8px;align-items:flex-start;}
+.chat-msg.user{justify-content:flex-end;}
+.chat-avatar{width:24px;height:24px;border-radius:50%;object-fit:cover;flex-shrink:0;margin-top:2px;}
+.chat-msg p{
+  background:var(--sand-deep);
+  padding:9px 12px;
+  border-radius:10px;
+  font-size:.85rem;
+  line-height:1.5;
+  max-width:230px;
+}
+.chat-msg.user p{background:var(--indigo);color:var(--cream);}
+.chat-wa-btn{
+  display:inline-block;
+  margin-top:2px;
+  background:#25D366;
+  color:white;
+  font-size:.78rem;
+  font-weight:600;
+  padding:7px 12px;
+  border-radius:20px;
+  text-decoration:none;
+}
+.chat-quick{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  padding:0 14px 10px;
+}
+.chat-quick button{
+  background:var(--sand);
+  border:1px solid var(--sand-deep);
+  border-radius:16px;
+  padding:6px 11px;
+  font-size:.76rem;
+  cursor:pointer;
+  font-family:'Jost',sans-serif;
+  color:var(--ink);
+}
+.chat-quick button:hover{background:var(--marigold-light);}
+.chat-input{
+  display:flex;
+  border-top:1px solid var(--sand-deep);
+  padding:8px;
+  gap:8px;
+}
+.chat-input input{
+  flex:1;
+  border:none;
+  outline:none;
+  background:transparent;
+  font-family:'Jost',sans-serif;
+  font-size:.85rem;
+  padding:6px 8px;
+}
+.chat-input button{
+  background:var(--sindoor);
+  color:var(--cream);
+  border:none;
+  border-radius:50%;
+  width:34px;height:34px;
+  cursor:pointer;
+  font-size:.95rem;
+}
+@media(max-width:480px){
+  .chat-widget{left:14px;bottom:14px;}
+  .chat-panel{width:88vw;}
+}
+
+/* ---------- WHATSAPP ---------- */
+.whatsapp{
+  position:fixed;
+  bottom:24px;right:24px;
+  background:#25D366;
+  color:white;
+  width:58px;height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:1.6rem;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  z-index:999;
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 8px 20px rgba(0,0,0,.25),0 0 0 0 rgba(37,211,102,.5);}
+  50%{box-shadow:0 8px 20px rgba(0,0,0,.25),0 0 0 10px rgba(37,211,102,0);}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;}
+}
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+  <a href="#top" class="nav-brand"><img src="images/logo.jpg" alt="Pooja Pre Wedding Set logo" class="nav-logo">Pooja Pre Wedding Set</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Journeys</a></li>
+    <li><a href="#gallery">Moments</a></li>
+    <li><a href="#booking">Booking</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<header id="top">
+  <svg class="hero-svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffe9b8" stop-opacity="0.9"/>
+        <stop offset="45%" stop-color="#f4c873" stop-opacity="0.45"/>
+        <stop offset="100%" stop-color="#f4c873" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#7a3b52"/>
+        <stop offset="100%" stop-color="#241b30"/>
+      </linearGradient>
+    </defs>
+
+    <!-- sun -->
+    <circle cx="800" cy="560" r="220" fill="url(#sunGlow)"/>
+    <circle cx="800" cy="560" r="70" fill="#ffdf99"/>
+
+    <!-- far hills -->
+    <path d="M0,610 Q200,540 420,600 T800,580 T1200,610 T1600,580 L1600,650 L0,650 Z" fill="#2b2440" opacity="0.85"/>
+    <!-- mid hills -->
+    <path d="M0,650 Q260,580 540,640 T1050,620 T1600,650 L1600,700 L0,700 Z" fill="#221c33"/>
+    <!-- dam wall -->
+    <g opacity="0.9">
+      <rect x="640" y="600" width="320" height="60" fill="#1a1526"/>
+      <g stroke="#3a3050" stroke-width="3">
+        <line x1="670" y1="600" x2="670" y2="660"/>
+        <line x1="710" y1="600" x2="710" y2="660"/>
+        <line x1="750" y1="600" x2="750" y2="660"/>
+        <line x1="790" y1="600" x2="790" y2="660"/>
+        <line x1="830" y1="600" x2="830" y2="660"/>
+        <line x1="870" y1="600" x2="870" y2="660"/>
+        <line x1="910" y1="600" x2="910" y2="660"/>
+        <line x1="950" y1="600" x2="950" y2="660"/>
+      </g>
+    </g>
+
+    <!-- water -->
+    <rect x="0" y="650" width="1600" height="250" fill="url(#waterGrad)"/>
+    <g stroke="#f4c873" stroke-opacity="0.35" stroke-width="2" fill="none">
+      <path d="M650,690 Q800,680 950,690"/>
+      <path d="M600,720 Q800,705 1000,720"/>
+      <path d="M560,752 Q800,734 1040,752"/>
+      <path d="M520,788 Q800,766 1080,788"/>
+      <path d="M480,828 Q800,802 1120,828"/>
+    </g>
+
+    <!-- birds -->
+    <g stroke="#f4e3c0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
+      <path d="M260,180 L280,165 L300,180"/>
+      <path d="M310,200 L330,183 L350,200"/>
+      <path d="M1230,150 L1250,135 L1270,150"/>
+    </g>
+
+    <!-- jeep silhouette on dam wall -->
+    <g transform="translate(700,560)" fill="#120f1c">
+      <rect x="0" y="14" width="86" height="26" rx="3"/>
+      <rect x="10" y="-6" width="46" height="22" rx="2"/>
+      <circle cx="16" cy="42" r="11"/>
+      <circle cx="70" cy="42" r="11"/>
+      <rect x="-6" y="20" width="8" height="10"/>
+    </g>
+  </svg>
+
+  <div class="hero-content">
+    <span class="eyebrow">your love story, Almatti style</span>
+    <h1>Where the road,<br>the water &amp; the <em>light</em> meet.</h1>
+    <p>Pooja Pre Wedding Set is Almatti's open-air studio for cinematic pre-wedding shoots — jeep tracks, still water and golden-hour skies, all in one frame.</p>
+    <div class="hero-tags">
+      <span>🚙 Open Jeep</span>
+      <span>🚤 Boating</span>
+      <span>🏍 Vintage Bike</span>
+    </div>
+    <a href="#booking" class="btn btn-fill">Reserve Your Date</a>
+    <a href="tel:+917619466618" class="btn btn-outline">Call Now</a>
+  </div>
+
+  <div class="scroll-cue"><span>scroll</span><span class="line"></span></div>
+</header>
+
+<section id="about">
+  <div class="about-wrap">
+    <div class="about-badge reveal">
+      <img src="images/logo.jpg" alt="Pooja Pre Wedding Set logo">
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">about the studio</span>
+      <h2>A reservoir-side studio built for real moments, not stiff poses</h2>
+      <p>Tucked beside the Almatti reservoir in Karnataka, we trade studio backdrops for open sky, dusty roads and quiet water. Every shoot is shaped around the two of you — the vehicle, the hour and the route are yours to choose.</p>
+      <p>From sunrise jeep runs to last-light boat rides, our team handles the route planning, the props and the timing, so you can just be present for it.</p>
+      <div class="about-stats">
+        <div><strong>3</strong><span>signature rides</span></div>
+        <div><strong>9+</strong><span>styled setups</span></div>
+        <div><strong>1</strong><span>reservoir, all yours</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-head reveal">
+    <span class="eyebrow">choose your ride</span>
+    <h2>Three ways into the story</h2>
+    <p>Each route is its own mood — pick one, or string two together for a fuller shoot.</p>
+  </div>
+
+  <div class="path-wrap">
+    <svg class="path-svg" viewBox="0 0 980 1000" preserveAspectRatio="none">
+      <path d="M860,0 C860,140 120,160 120,300 C120,440 860,460 860,600 C860,740 120,760 120,900"
+            stroke="#e8a33d" stroke-width="3" stroke-dasharray="2 14" fill="none" opacity="0.55" stroke-linecap="round"/>
+    </svg>
+
+    <div class="journey-row reveal">
+      <div class="journey-card">
+        <span class="tag">Route One</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none">
+          <rect x="6" y="20" width="36" height="13" rx="2" fill="#e8a33d"/>
+          <rect x="13" y="10" width="20" height="11" rx="1" fill="#e8a33d" opacity="0.7"/>
+          <circle cx="14" cy="35" r="5" fill="#1c2a44"/>
+          <circle cx="34" cy="35" r="5" fill="#1c2a44"/>
+        </svg>
+        <h3>Open Jeep Shoot</h3>
+        <p>Dust trails, wide skies and a stripped-down jeep — built for big, cinematic frames against the Almatti backcountry.</p>
+      </div>
+    </div>
+
+    <div class="journey-row reveal">
+      <div class="journey-card">
+        <span class="tag">Route Two</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none">
+          <path d="M4,32 Q24,42 44,32 L40,24 H8 Z" fill="#b5283b"/>
+          <rect x="14" y="14" width="20" height="11" rx="1" fill="#b5283b" opacity="0.7"/>
+          <path d="M2,38 Q24,46 46,38" stroke="#b5283b" stroke-width="2" fill="none" opacity="0.5"/>
+        </svg>
+        <h3>Boating Shoot</h3>
+        <p>Still reservoir water, soft reflections and quiet drifting — for the slower, more intimate half of your story.</p>
+      </div>
+    </div>
+
+    <div class="journey-row reveal">
+      <div class="journey-card">
+        <span class="tag">Route Three</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none">
+          <circle cx="12" cy="34" r="8" stroke="#1c2a44" stroke-width="3"/>
+          <circle cx="36" cy="34" r="8" stroke="#1c2a44" stroke-width="3"/>
+          <path d="M12,34 L22,18 L30,18 L36,34 M22,18 L26,26 H34" stroke="#1c2a44" stroke-width="3" fill="none"/>
+        </svg>
+        <h3>Vintage Bike Shoot</h3>
+        <p>A classic motorcycle, an empty road and that unmistakable old-world rhythm — retro, raw and a little rebellious.</p>
+      </div>
+    </div>
+
+    <div class="journey-row reveal">
+      <div class="journey-card">
+        <span class="tag">Bonus Route</span>
+        <svg class="icon" viewBox="0 0 48 48" fill="none">
+          <path d="M4,34 L16,18 L24,28 L32,14 L44,34 Z" fill="#5a7d63"/>
+          <circle cx="36" cy="12" r="5" fill="#e8a33d"/>
+        </svg>
+        <h3>Scenic Locations</h3>
+        <p>Hilltop overlooks, riverside trails and the reservoir's quieter corners — for couples who'd rather walk than ride.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="section-head reveal">
+    <span class="eyebrow">real frames, real settings</span>
+    <h2>Setups from our recent shoots</h2>
+    <p>A look at the decor and lighting installs already set up and waiting for you at the venue. Tap any photo for a closer look.</p>
+  </div>
+
+  <div class="moments-grid">
+    <div class="moment-card reveal" data-full="images/setup-cabana-fairylights.jpg">
+      <img src="images/setup-cabana-fairylights.jpg" alt="Fairy-light cabana with a candlelit table for two" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">starlit cabana</span>
+        <span class="sub">Fairy-light dinner setup</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-triangle-arch-florals.jpg">
+      <img src="images/setup-triangle-arch-florals.jpg" alt="Triangle light arches with floral accents" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">peaks &amp; petals</span>
+        <span class="sub">Triangle arch backdrop</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-floral-hoop-arch.jpg">
+      <img src="images/setup-floral-hoop-arch.jpg" alt="Circular floral hoop arch lit with fairy lights" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">floral halo</span>
+        <span class="sub">Hanging hoop arch</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-hanging-floral-lantern.jpg">
+      <img src="images/setup-hanging-floral-lantern.jpg" alt="Hanging lit lantern frame with trailing flowers" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">lantern bloom</span>
+        <span class="sub">Floral light cage</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-neon-heart.jpg">
+      <img src="images/setup-neon-heart.jpg" alt="Glowing neon heart installation on a stand" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">neon romance</span>
+        <span class="sub">Heart light installation</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-crescent-moon.jpg">
+      <img src="images/setup-crescent-moon.jpg" alt="Large lit crescent moon prop" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">moonlit frame</span>
+        <span class="sub">Crescent moon backdrop</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-teepee-lantern.jpg">
+      <img src="images/setup-teepee-lantern.jpg" alt="Sheer teepee tent lit with a hanging lantern" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">tucked away</span>
+        <span class="sub">Sheer teepee &amp; lantern</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-picket-fence-lounge.jpg">
+      <img src="images/setup-picket-fence-lounge.jpg" alt="Picket-fence lounge corner with lights and cushions" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">garden corner</span>
+        <span class="sub">Picket-fence lounge</span>
+      </div>
+    </div>
+
+    <div class="moment-card reveal" data-full="images/setup-teddy-bears.jpg">
+      <img src="images/setup-teddy-bears.jpg" alt="Teddy bear and heart cushion prop styling" loading="lazy">
+      <div class="moment-caption">
+        <span class="eyebrow">soft &amp; sweet</span>
+        <span class="sub">Prop styling detail</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="booking-box reveal">
+    <span class="eyebrow">advance booking</span>
+    <h2>Hold your date before the season fills up</h2>
+    <p>Weekends, festival dates and peak golden-hour slots go first. Tell us your preferred route and date, and we'll lock it in.</p>
+    <a href="https://wa.me/917619466618?text=Hi!%20I%27d%20like%20to%20book%20a%20pre-wedding%20shoot%20date." class="btn btn-fill">Book on WhatsApp</a>
+    <a href="tel:+917619466618" class="btn btn-outline">Call Now</a>
+    <div class="garland">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-head reveal">
+    <span class="eyebrow">find us</span>
+    <h2>Plan your visit</h2>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-card reveal">
+      <span class="eyebrow">say hello</span>
+      <div class="contact-line">
+        <div class="ic">📞</div>
+        <div><strong>Phone</strong><span><a href="tel:+917619466618">+91 76194 66618</a></span></div>
+      </div>
+      <div class="contact-line">
+        <div class="ic">💬</div>
+        <div><strong>WhatsApp</strong><span><a href="https://wa.me/917619466618?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Pooja%20Pre%20Wedding%20Set.">Message us directly</a></span></div>
+      </div>
+      <div class="contact-line">
+        <div class="ic">📍</div>
+        <div><strong>Location</strong><span>8WP4+RHQ, Almatti, Araladinni,<br>Karnataka 586213</span></div>
+      </div>
+    </div>
+    <div class="map-frame reveal">
+      <iframe src="https://maps.google.com/maps?q=8WP4%2BRHQ%20Almatti&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="images/logo.jpg" alt="Pooja Pre Wedding Set logo" class="footer-logo">
+  <h3>Pooja Pre Wedding Set</h3>
+  <div class="foot-divider"></div>
+  <p>Almatti, Karnataka · Open Jeep · Boating · Vintage Bike</p>
+  <p>© 2026 Pooja Pre Wedding Set. All rights reserved.</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <img src="images/logo.jpg" alt="Pooja Pre Wedding Set">
+      <div>
+        <strong>Pooja Pre Wedding Set</strong>
+        <span>Ask us anything</span>
+      </div>
+      <button id="chatClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg bot">
+        <img src="images/logo.jpg" class="chat-avatar" alt="">
+        <p>Hi! 👋 Ask me about our setups, location or booking — or tap a question below.</p>
+      </div>
+    </div>
+    <div class="chat-quick" id="chatQuick">
+      <button data-q="Tell me more about Pooja Pre Wedding Set">Tell me more</button>
+      <button data-q="What setups do you have">Our setups</button>
+      <button data-q="Where are you located">Location</button>
+      <button data-q="How do I book a date">Book a date</button>
+    </div>
+    <form class="chat-input" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off">
+      <button type="submit" aria-label="Send">➤</button>
+    </form>
+  </div>
+  <button class="chat-toggle" id="chatToggle" aria-label="Chat with us">
+    <img src="images/logo.jpg" alt="">
+  </button>
+</div>
+
+<a class="whatsapp" href="https://wa.me/917619466618?text=Hi!%20I%27d%20like%20to%20know%20more%20about%20Pooja%20Pre%20Wedding%20Set." target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.5c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1.9.9-3-.2-.3C3.8 14.6 3.3 13.3 3.3 12 3.3 7.2 7.2 3.3 12 3.3S20.7 7.2 20.7 12 16.8 20.2 12 20.2zm5-6.6c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.2-.6.9-.8 1-.1.2-.3.2-.5.1-1.4-.6-2.3-1.4-3.1-2.6-.2-.3 0-.4.1-.6.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1 0 1.2 1 2.4 1.1 2.6.1.2 1.9 2.9 4.5 4 .6.2 1.1.4 1.5.5.6.2 1.2.1 1.6-.1.5-.3 1.5-1.5 1.5-1.5z"/></svg>
+</a>
+
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>40){navbar.classList.add('scrolled');}
+  else{navbar.classList.remove('scrolled');}
+});
+
+const navToggle=document.getElementById('navToggle');
+const navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');}
+  });
+},{threshold:0.15});
+reveals.forEach(el=>obs.observe(el));
+
+/* ----- lightbox ----- */
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightboxImg');
+document.querySelectorAll('.moment-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    lightboxImg.src=card.dataset.full;
+    lightboxImg.alt=card.querySelector('img').alt;
+    lightbox.classList.add('open');
+  });
+});
+lightbox.addEventListener('click',()=>lightbox.classList.remove('open'));
+
+/* ----- chat widget ----- */
+const chatWidget=document.getElementById('chatWidget');
+const chatToggle=document.getElementById('chatToggle');
+const chatClose=document.getElementById('chatClose');
+const chatBody=document.getElementById('chatBody');
+const chatForm=document.getElementById('chatForm');
+const chatInput=document.getElementById('chatInput');
+const waBase='https://wa.me/917619466618?text=';
+
+chatToggle.addEventListener('click',()=>chatWidget.classList.toggle('open'));
+chatClose.addEventListener('click',()=>chatWidget.classList.remove('open'));
+
+function addMsg(text,sender){
+  const div=document.createElement('div');
+  div.className='chat-msg '+sender;
+  if(sender==='bot'){
+    div.innerHTML='<img src="images/logo.jpg" class="chat-avatar" alt=""><p>'+text+'</p>';
+  }else{
+    div.innerHTML='<p></p>';
+    div.querySelector('p').textContent=text;
+  }
+  chatBody.appendChild(div);
+  chatBody.scrollTop=chatBody.scrollHeight;
+}
+
+function addWaButton(query){
+  const div=document.createElement('div');
+  div.className='chat-msg bot';
+  const a=document.createElement('a');
+  a.className='chat-wa-btn';
+  a.target='_blank';
+  a.href=waBase+encodeURIComponent(query);
+  a.textContent='Continue on WhatsApp →';
+  div.innerHTML='<img src="images/logo.jpg" class="chat-avatar" alt="">';
+  div.appendChild(a);
+  chatBody.appendChild(div);
+  chatBody.scrollTop=chatBody.scrollHeight;
+}
+
+function botReply(q){
+  const t=q.toLowerCase();
+  let reply;
+  if(t.includes('more')||t.includes('tell')||t.includes('about')){
+    reply="Pooja Pre Wedding Set is an open-air pre-wedding studio at Almatti, Karnataka. We offer Open Jeep, Boating and Vintage Bike shoots, plus styled decor setups like fairy-light cabanas, floral arches and lantern installs — all against the reservoir's golden-hour views.";
+  }else if(t.includes('setup')||t.includes('decor')||t.includes('theme')){
+    reply="Our setups include a fairy-light dinner cabana, floral hoop and triangle arches, a hanging floral lantern, a neon heart install, a crescent moon backdrop and a sheer teepee with lanterns. Scroll up to the gallery to see them all.";
+  }else if(t.includes('locat')||t.includes('where')||t.includes('address')){
+    reply="We're at 8WP4+RHQ, Almatti, Araladinni, Karnataka 586213 — right by the Almatti reservoir. The Contact section above has the map.";
+  }else if(t.includes('book')||t.includes('date')||t.includes('available')||t.includes('price')||t.includes('cost')||t.includes('package')){
+    reply="For dates, packages and pricing, the fastest way is WhatsApp — tap below and we'll get you the details and hold your date.";
+  }else if(t.includes('jeep')||t.includes('boat')||t.includes('bike')){
+    reply="Yes — Open Jeep, Boating and Vintage Bike shoots are all available, and you can combine more than one into a single session.";
+  }else{
+    reply="Thanks for asking! For anything specific, our team can help fastest on WhatsApp — tap below to continue the chat there.";
+  }
+  setTimeout(()=>{
+    addMsg(reply,'bot');
+    addWaButton(q);
+  },450);
+}
+
+document.querySelectorAll('#chatQuick button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const q=b.dataset.q;
+    addMsg(q,'user');
+    botReply(q);
+  });
+});
+
+chatForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const q=chatInput.value.trim();
+  if(!q)return;
+  addMsg(q,'user');
+  chatInput.value='';
+  botReply(q);
+});
+</script>
+
+</body>
+</html>
